@@ -7,6 +7,11 @@ module.exports = {
   devtool: 'source-map',
 
   resolve: {
+
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
+      
     extensions: ['.jsx', '.js', '.tsx', '.ts'],
   },
 
