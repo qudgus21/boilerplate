@@ -1,6 +1,6 @@
 import winston from 'winston';
 import winstonDaily from 'winston-daily-rotate-file';
-import config from '../config';
+import config from '@/config';
 
 const logDir = 'logs';  // logs 디렉토리 하위에 로그 파일 저장
 const { combine, timestamp, printf } = winston.format;

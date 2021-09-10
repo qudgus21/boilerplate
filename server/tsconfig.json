@@ -1,8 +1,12 @@
 {
     "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["src/*"]
+      },
       "strict": true,
       "target": "es5",
       "module": "commonjs",
       "esModuleInterop": true,
     }
-  }
+}
