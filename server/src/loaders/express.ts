@@ -3,8 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import config from '@/config';
-// import routes from '../api';
-
+import routes from '@/api';
 
 export default (app: Express) => {
 
@@ -18,4 +17,5 @@ export default (app: Express) => {
 
   app.use(morgan(config.mode === 'development' ? 'dev' : 'combined'));
 
+  app.use(config.api.prefix, routes());
 };
