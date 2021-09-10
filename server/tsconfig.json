@@ -1,5 +1,7 @@
 {
     "compilerOptions": {
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
       "baseUrl": ".",
       "paths": {
         "@/*": ["src/*"]
@@ -8,5 +10,6 @@
       "target": "es5",
       "module": "commonjs",
       "esModuleInterop": true,
+      "strictPropertyInitialization": false
     }
 }
