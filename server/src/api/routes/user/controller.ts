@@ -1,25 +1,24 @@
-import { NextFunction, Request, Response } from 'express';
-import Container from 'typedi';
-import UsersService from '@/service/user';
-import {commonResponse} from '@/type/common'
+import { NextFunction, Request, Response } from "express";
+import Container from "typedi";
+import UsersService from "@/service/user";
+import { commonResponse } from "@/type/common";
 
 export const handleCreateUser = async (
   req: Request,
   res: Response,
-  next: NextFunction,
+  next: NextFunction
 ) => {
   try {
-    const {
-      email,
-    } = req.body;
+    const { email } = req.body;
 
     const userServiceInstance = Container.get(UsersService);
 
-    const { idx, createdAt, updatedAt } = await userServiceInstance.createUser(email) as commonResponse;
+    const { idx, createdAt, updatedAt } = (await userServiceInstance.createUser(
+      email
+    )) as commonResponse;
 
     return res.json({ idx, createdAt, updatedAt });
   } catch (e) {
     return next(e);
   }
 };
-

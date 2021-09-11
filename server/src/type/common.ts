@@ -1,5 +1,5 @@
-export type commonResponse = {
-    idx: number
-    createdAt: Date,
-    updatedAt:Date
-}
+export type CommonResponse = {
+  idx: number;
+  createdAt: Date;
+  updatedAt: Date;
+};

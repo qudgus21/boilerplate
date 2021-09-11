@@ -1,5 +1,4 @@
-
-import { Container } from 'typedi';
+import { Container } from "typedi";
 
 export interface DependencyInfo<D> {
   name: string;
@@ -7,7 +6,7 @@ export interface DependencyInfo<D> {
 }
 
 const dependencyInjector = <D = unknown>(dependencies: DependencyInfo<D>[]) => {
-    dependencies.forEach(d => {
+  dependencies.forEach((d) => {
     Container.set(d.name, d.dependency);
   });
 };
