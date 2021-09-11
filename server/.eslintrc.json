@@ -1,0 +1,19 @@
+{
+  "env": {
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  },
+  "plugins": ["prettier", "@typescript-eslint"],
+  "extends": [
+    "airbnb-typescript/base",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/eslint-recommended"
+  ],
+  "rules": {
+    "import/no-extraneous-dependencies": "off",
+    "import/extensions": "off"
+  }
+}
