@@ -4,10 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --mode development --open --hot",
+    "start": "cross-env webpack --mode development",
+    "dev": "cross-env webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode=production",
     "prestart": "npm build",
-    "start": "webpack --mode development",
     "lint:fix": "eslint --fix .",
     "prettier:write": "prettier --write .",
     "precommit": "yarn lint:fix & yarn prettier:write"
@@ -25,6 +25,9 @@
     "@types/webpack": "^5.28.0",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.31.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "dotenv-webpack": "^7.0.3",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-typescript": "^14.0.0",
