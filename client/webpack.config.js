@@ -1,42 +1,41 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: 'development', 
+  mode: "development",
 
-  devtool: 'source-map',
+  devtool: "source-map",
 
   resolve: {
-
     alias: {
-      '@': path.resolve(__dirname, 'src'),
+      "@": path.resolve(__dirname, "src"),
     },
-      
-    extensions: ['.jsx', '.js', '.tsx', '.ts'],
+
+    extensions: [".jsx", ".js", ".tsx", ".ts"],
   },
 
   entry: {
-    app: './src/index.tsx',
+    app: "./src/index.tsx",
   },
 
   module: {
     rules: [
       {
-        test: /\.tsx?$/, 
-        loader: 'ts-loader',
+        test: /\.tsx?$/,
+        loader: "ts-loader",
         exclude: /node_modules/,
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-        template: './src/index.html',
+      template: "./src/index.html",
     }),
   ],
-  
+
   output: {
-    filename: '[name].js',
-    path: path.resolve(__dirname, './dist'),
+    filename: "[name].js",
+    path: path.resolve(__dirname, "./dist"),
   },
 
   devServer: {

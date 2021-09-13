@@ -1,9 +1,7 @@
-import { FC } from 'react';
+import { FC } from "react";
 
-const Footer: FC = () => { 
-    return (
-        <div>Home 컴포넌트 - Footer</div>
-    )
-}
+const Footer: FC = () => {
+  return <div>Home 컴포넌트 - Footer</div>;
+};
 
 export default Footer;

@@ -1,19 +1,15 @@
 {
   "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
     "strict": true,
-    "allowSyntheticDefaultImports" : true,
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "lib": ["es5",
-            "es2015", 
-            "es2016", 
-            "es2017", 
-            "es2020", 
-            "dom"
-           ],
+    "lib": ["es5", "es2015", "es2016", "es2017", "es2020", "dom"],
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-    "@/*": ["src/*"]
-    }    
+      "@/*": ["src/*"]
+    }
   }
 }
