@@ -1,10 +1,8 @@
 import { Service } from "typedi";
 import { InjectRepository } from "typeorm-typedi-extensions";
 import UserRepository from "@/repository/user";
-// import ErrorResponse from '@/utils/errorResponse';
-// import {
-// } from '@/constants/error';
-// import UserEntity from "@/entity/user";
+import ErrorResponse from "@/utils/errorResponse";
+import { unable } from "@/constants/error";
 
 @Service()
 class UsersService {
@@ -22,10 +20,7 @@ class UsersService {
       const { idx, createdAt, updatedAt } = createdUser;
       return { idx, createdAt, updatedAt };
     } catch (e) {
-      //   if (e?.isOperational) {
-      //     throw e;
-      //   }
-      //   throw new ErrorResponse(userCreateError.unable);
+      throw new ErrorResponse(unable("create user"));
     }
   }
 }

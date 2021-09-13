@@ -19,8 +19,9 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production env-cmd -f .env 'src/**/*.ts' --exec ts-node -r tsconfig-paths/register src/app.ts",
     "dev": "cross-env NODE_ENV=development env-cmd -f .env nodemon --watch 'src/**/*.ts' --exec ts-node -r tsconfig-paths/register src/app.ts",
-    "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+    "prettier:write": "prettier --write .",
+    "precommit": "yarn lint:fix & yarn prettier:write"
   },
   "devDependencies": {
     "@types/cookie-parser": "^1.4.2",
